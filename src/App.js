@@ -1,16 +1,16 @@
 // import "./styles.css";
-
+import './App.css';
 import React, { useState } from "react";
 
 function App() {
   const questions = [
     {
-      questionText: "Who is Prime Minister of India?",
+      questionText: "What does HTML stand for?",
       answerOptions: [
-        { answerText: "Vijay Rupani", isCorrect: false },
-        { answerText: "Manmohan singh", isCorrect: false },
-        { answerText: "Narendra Modi", isCorrect: true },
-        { answerText: "Deep Patel", isCorrect: false }
+        { answerText: " Hyperlinks and Text Markup Language", isCorrect: false },
+        { answerText: " Home Tool Markup Language", isCorrect: false },
+        { answerText: " Hyper Text Markup Language", isCorrect: true },
+        { answerText: " Home Tool & Gadgate Markup Language", isCorrect: false },
       ]
     },
     {
@@ -71,7 +71,7 @@ function App() {
             <div className="question-section">
               <div className="question-count">
                 <span>Question {currentQuestion + 1}</span>
-                {questions.length}
+                out of {questions.length}
               </div>
               <div className="question-text">
                 {questions[currentQuestion].questionText}
